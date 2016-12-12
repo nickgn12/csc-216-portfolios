@@ -1,0 +1,37 @@
+\section{Projects}
+\subsection{Expression Solver}
+\info{Expression Solver}{5}{
+  Write a program that takes, as input, a fully parenthesized,
+  arithmetic expression and converts it to a binary expression tree.
+  Your program should display the tree in some way and also print the
+  value associated with the root. For an additional challenge, allow
+  for the leaves to store variables of the form x1, x2, x3, and so on,
+  which are initially 0 and which can be updated interactively by your
+  program, with the corresponding update in the printed value of the
+  root of the expression tree.  
+  Begin with the "For an additional challenge..." version including at
+  least +, -, *, /, \% (call fmod if using double values in C++),
+  parentheses to alter precedence, =, +=, -=, *=, /=, \%=. (This is not
+  a complete set of C/C++/Java operations, but to be complete, you'd
+  have to allow data types or break some actual C++ rules. Data types
+  are beyond the scope of this project!)
+  now parse not just one but a sequence of ;-terminated expressions
+  ending ultimately at an EOF marker; the sequence should be able to
+  come from either a file or the keyboard; at the end of the sequence,
+  display the values of all variables assigned to during the expressions.
+  }
+\subsubsection{Compiler Environment}
+\srcfile{environment}
+\subsubsection{Source}
+\srcfile{../project/arithmetic-expression/Makefile}
+\srccode{../project/arithmetic-expression/main.cpp}
+\srccode{../project/arithmetic-expression/btree.hpp}
+\srccode{../project/arithmetic-expression/exprset.hpp}
+\srccode{../project/arithmetic-expression/exprtree.hpp}
+\srccode{../project/arithmetic-expression/varstore.cpp}
+\srccode{../project/arithmetic-expression/exprset.cpp}
+\srccode{../project/arithmetic-expression/exprtree.cpp}
+\subsubsection{Compiler Output}
+\srcfile{../project/arithmetic-expression/compilerout}
+\subsubsection{Program Output}
+\srcfile{../project/arithmetic-expression/progout}

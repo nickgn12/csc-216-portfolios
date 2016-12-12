@@ -1,0 +1,4 @@
+➜  reverse-polish git:(master) ✗ make CC=harper_Cpp
+harper_Cpp  -std=c++14 main.cpp -o rpn.out
+main.cpp***
+

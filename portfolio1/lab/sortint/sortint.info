@@ -1,0 +1,8 @@
+Name:		Nicolas Nytko			Course: CSC 216
+
+Activity:	Sort Int Array
+Level:          3
+Description:	C-3.18. Write a short recursive C++ function
+                that will rearrange an array of int values so
+                that all the even values appear before all the
+                odd values.

@@ -1,0 +1,22 @@
+➜  arithmetic-expression git:(master) ✗ ./arithmetic.out
+Enter equation(s) separated by semicolons:
+5+5-2
+
+Values:
+((5+5)-2) = 8
+➜  arithmetic-expression git:(master) ✗ ./arithmetic.out
+Enter equation(s) separated by semicolons:
+x=7;7*x
+
+Values:
+(x=7) = 7
+(7*x) = 49
+
+Variables:
+x = 7
+➜  arithmetic-expression git:(master) ✗ ./arithmetic.out
+Enter equation(s) separated by semicolons:
+5*5*5*5*5^2
+
+Values:
+((((5*5)*5)*5)*(5^2)) = 15625

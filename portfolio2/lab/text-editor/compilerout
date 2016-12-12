@@ -1,0 +1,5 @@
+➜  text-editor git:(master) ✗ make CC=harper_cpp
+harper_cpp  -std=c++14 main.cpp fakecurses.cpp -o editor.out
+fakecurses.cpp...
+main.cpp***
+

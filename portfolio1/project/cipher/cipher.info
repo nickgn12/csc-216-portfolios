@@ -1,0 +1,22 @@
+Name:		Nicolas Nytko			Course: CSC 216
+
+Activity:	Encryption Cipher
+Level:          5
+Description:	Write a program that can perform encryption and decryption
+                using an arbitrary substitution cipher. In this case, the
+                encryption array is a random shuffling of the letters in the
+                alphabet. Your program should generate a random encryption
+                array, its corresponding decryption array, and use these to
+                encode and decode a message. Allow for the saving and loading
+                of encrypted messages by storing the 26 letter encryption key
+                amongst the n encoded characters of the message. Note that for
+                an n character message, there will be n+1 slots amongst them.
+                For a 1-character message, for instance, there is a slot before
+                the character and a slot after the character. For a 2-character
+                message, there are slots before and after the first character
+                and after the second character. And so on... Make sure the extra
+                26%(n+1) letters from the encryption key are located carefully
+                to make the spread nice and even. (Note that when the message is
+                longer than 25 characters, each letter of the key is alone by
+                itself and, in fact, you are spreading the characters of the
+                message amongst the 27 slots around the key values now.)

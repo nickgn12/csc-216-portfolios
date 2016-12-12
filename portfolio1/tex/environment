@@ -1,0 +1,17 @@
+➜  tex git:(master) ✗ pwd
+/Users/nicolas/Git/portfolio1/tex
+➜  tex git:(master) ✗ uname -a
+Darwin Nicolass-MacBook-Pro.local 16.0.0 Darwin Kernel Version 16.0.0: Mon Aug 29 17:56:20 PDT 2016; root:xnu-3789.1.32~3/RELEASE_X86_64 x86_64
+➜  tex git:(master) ✗ clang --version
+Apple LLVM version 8.0.0 (clang-800.0.38)
+Target: x86_64-apple-darwin16.0.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+➜  ~ harper_cpp --version
+This is harper_cpp version 1.221 executing under perl v5.18.2 and compiling with:
+
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.0.0 (clang-800.0.38)
+Target: x86_64-apple-darwin16.1.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin

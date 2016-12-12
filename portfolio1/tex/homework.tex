@@ -1,0 +1,84 @@
+\section{Homework}
+\subsection{Linked Lists}
+\hwproblem{R-3.7}{
+  Give an algorithm for finding the penultimate (second to last) node in a
+  singly linked list where the last element is indicated by a null next link.
+}
+\srccode{../hw/r-3.7.cpp}
+\hwproblem{R-3.10}{
+  Describe a nonrecursive function for finding, by link hopping, the middle node
+  of a doubly linked list with header and trailer sentinels. (Note: This
+  function must only use link hopping; it cannot use a counter.) What is the
+  running time of this function?
+}
+\srccode{../hw/r-3.10.cpp}
+\hwproblem{C-3.3}{
+  Let A be an array of size $n \geq 2$ containing integers from $1$ to $n - 1$,
+  inclusive, with exactly one repeated. Describe a fast algorithm for finding
+  the integer in A that is repeated.
+}
+\srccode{../hw/c-3.3.cpp}
+\hwproblem{C-3.4}{
+  Let B be an array of size $n \geq 6$ containing integers from $1$ to $n - 5$,
+  inclusive, with exactly five repeated. Describe a good algorithm for finding
+  the five integers in B that are repeated.
+}
+
+Sort B.  Create a variable that holds how many times the current value has been repeated, and a variable to hold what the last value was.
+Loop through the array and increment the repeat variable every time the value has been repeated, and reset it to 0 when a new value is introduced.  End when the repeat value reaches 5.
+\hwproblem{C-3.5}{
+  Suppose you are designing a multi-player game that has $n \geq 1000$
+  players, numbered $1$ to $n$, interacting in an enchanted forest. The winner of
+  this game is the first player who can meet all the other players at least
+  once (ties are allowed Assuming that there is a function meet(i, j), which is
+  called each time a player i meets a player j (with $i \ne j$ ), describe
+  a way to keep track of the pairs of meeting players and who is the winner.
+}
+
+Create a two dimensional boolean array with the x axis corresponding to the index of the player, and the y axis corresponding to whether that person was met.  So to see if player x has met player y, check array index \texttt{p[x][y]}.  If a full column is filled, then that player has met everyone.
+\hwproblem{C-3.8}{
+  Describe a good algorithm for concatenating two singly linked lists L and M,
+  with header sentinels, into a single list L' that contains all the nodes of L
+  followed by all the nodes of M. Create a new list L' and copy all of the nodes
+  from L into it. At the end of L', copy all of the nodes of M.
+}
+
+Copy all of the elements from L into L'.  Start copying M at the last node of L' after the header sentinel and continue until the null pointer.
+\hwproblem{C-3.9}{
+  Give a fast algorithm for concatenating two doubly linked lists L and M, with
+  header and trailer sentinel nodes, into a single list L′.
+}
+
+Copy all the nodes from L into L'.  Copy the nodes from M into the end of L'.  Set the next 
+\hwproblem{C-3.10}{
+  Describe in detail how to swap two nodes x and y (and not just their contents)
+  in a singly linked list L given references only to x and y. Repeat this
+  exercise for the case when L is a doubly linked list. Which algorithm takes
+  more time?
+}
+
+For a singly linked list: loop through until the nodes before x and y are found, label them x' and y'.  Set x' next node to y, and y next to x original next.  Set y' next node to x, and x next node to y original next.
+
+For a doubly linked list: do the same thing except time is not needed to loop through and find the previous nodes.  Don't forget to set the previous node values.
+\hwproblem{C-3.11}{
+  Describe in detail an algorithm for reversing a singly linked list L using
+  only a constant amount of additional space and not using any recursion.
+}
+Define n to be the size of the linked list.  Loop \texttt{n-1} times with iterator i starting at 0, and bring node \texttt{n-i} backwards by swapping it \texttt{n-i} times with the node previous.  Save the previous node as a pointer variable.
+
+\hwproblem{C-3.22}{
+  Suppose you are given two circularly linked lists, L and M, that is, two lists
+  of nodes such that each node has a nonnull next node. Describe a fast
+  algorithm for telling if L and M are really the same list of nodes but with
+  different (cursor) starting points.
+}
+
+Create two node pointers, lowercase l and m, and set them to point to the head of L and M respectively.  Loop through the list until l is equal to M and m is equal to L (they are the same list), or l is equal to L and m is equal to M (the whole list has been parsed and L and M are not the same list).
+
+\hwproblem{C-3.23}{
+  Given a circularly linked list L containing an even number of nodes,
+  describe how to split L into two circularly linked lists of half the size.
+}
+
+Given a circularly linked list L, define M to be the length of L divided by two.
+Create two node pointers, x and y, and have them point to the beginning of L and the node at M, respectively.  For the last node in the first half (M-1), set its next node to the first node.  For the first node in the first half (0), set its previous node to M-1.  For node M, set its previous node to the last node in the list.  Set the last node's next to M.

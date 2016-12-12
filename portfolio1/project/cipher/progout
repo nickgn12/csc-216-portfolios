@@ -1,0 +1,14 @@
+➜  cipher git:(master) ✗ ./cipher.out
+USAGE: ./cipher.out -f <filename> [options]
+
+OPTIONS:
+    -f, --file            File to do operations on.
+    -e, --encrypt <msg>        Encrypts <msg> and saves it in file.
+    -d, --decrypt        Decrypts the message loaded from file.
+
+➜  cipher git:(master) ✗ ./cipher.out -f file -e helloworld
+➜  cipher git:(master) ✗ ./cipher.out -f file -d
+HELLOWORLD
+➜  cipher git:(master) ✗ ./cipher.out -f file -e goodmorningjasonjames
+➜  cipher git:(master) ✗ ./cipher.out -f file -d
+GOODMORNINGJASONJAMES

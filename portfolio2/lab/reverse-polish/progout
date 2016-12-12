@@ -1,0 +1,15 @@
+➜  reverse-polish git:(master) ✗ ./rpn.out
+Please enter an expression in postfix (reverse polish) notation:
+5 5 +
+
+The value is: 10
+➜  reverse-polish git:(master) ✗ ./rpn.out
+Please enter an expression in postfix (reverse polish) notation:
+5 5 + 10 *
+
+The value is: 100
+➜  reverse-polish git:(master) ✗ ./rpn.out
+Please enter an expression in postfix (reverse polish) notation:
+5 5 - 2 +
+
+The value is: 2

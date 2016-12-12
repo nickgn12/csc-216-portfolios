@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+
+\title{The Pertinence of PERT \\[0.25in]
+  \small PERT And CPM And Why They May \textit{Pert}ain to You}
+\author{Nicolas Nytko}
+
+\begin{document}
+\maketitle
+\newpage
+
+\doublespacing
+
+\section{History and Background}
+When working on large-scale projects, it is important to be able to keep track of time and resources.
+Project management tools, notably PERT, were developed in order to keep track of these resources and to keep track of project milestones.
+
+Project management tools are not a modern concept, and some can be traced all the way back to ancient civilizations.  Just look at the ancient Egyptians and how they build the \textit{Great Pyramid of Giza}.  Over a 20 year building period, over two million blocks of stone, each weighing about 2 tons, were dragged in and placed to build the great pyramid.  Looking at ancient records, archaeologists can infer that thousands of workers were managed by splitting them into four groups, one for each side of the pyramid.  Sophisticated planning, management, and organization was required in order to find the correct stones, then cut, move, and set them into place.
+
+A more recent example of project management was the creation of the \textit{Gantt} chart by American mechanical engineers Henry Gantt and Frederick Taylor.
+A Gantt chart is a bar chart where activities are displayed by horizontal bars, each having a length proportional to approximately how long the item should take to complete.
+Gantt charts were first used in World War I, and also in some famous projects at the time such as the Hoover Dam, and later the U.S. interstate highway network.
+They are still used today because they are simple and easy to understand by the entire workforce.
+However, one of the major shortcomings is that the relationships between activities and their dependencies are not shown on this chart, which is where PERT comes in.
+
+The \textit{program evaluation and review technique}, PERT for short, is a tool used to analyze and represent the tasks and procedures needed to complete a program or project.
+PERT was originally developed by the United States Navy's Special Projects Office, along with Lockeed Missile Systems in the late 1950's to help measure and estimate progress for several missile projects, the most notable of which was the \textit{UGM-27 Polaris} submarine-launched missile.
+PERT was designed to manage the over 3,000 contractors employed on the \textit{Polaris} program by essentially providing a project roadmap that identified major milestones and how they were all dependent on each other.
+
+One important thing to note was that the only constraint that PERT was created to deal with was time.
+Since this system was developed by the U.S. Navy, one could easily deduce why other factors such as cost or quality control were not factored in.
+The development of PERT was driven by a political need for the United States to compete with the Soviet Union during the cold war.
+PERT was used to ensure that the Polaris project was completed during a time when the United States Government was worried about the Soviet Union's increasing stockpile of nuclear arms.
+\section{How Does PERT Work?}
+PERT charts are used to schedule, organize, and manage tasks and milestones in a project or program.
+A PERT chart begins with one initial task or node that signifies the start of the project.
+From this node, arrows are drawn to other nodes and this depicts the sequence of tasks in the project.  These tasks that are linked in order are called \textit{dependent} or \textit{serial} tasks.
+Concurrent sequences of tasks can be going on at the same time, these are called \textit{parallel} or \textit{concurent} tasks.
+If a task has has multiple arrows leading to it, then all those previous tasks must be completed before that task can be done, these are considered to have \textit{task dependency}.  Nodes that have task dependency cannot be done before their dependent tasks.
+
+Numbers are placed along the arrows to denote how much time is allotted to complete the task.
+For tasks that don't take any time to complete but must be done before others, they are often depicted with a dotted arrow line.  These are called \textit{dummy activities}.
+An example of a dummy activity is when system files must be converted before more tasks can be completed, but relative to the project timeline the time needed to complete this task is negligible.
+
+From this graph, multiple different time estimations can be derived.
+The first is the \textit{optimistic time}, which is the minimum time required to accomplish a path or activity assuming that everything goes better than expected.
+The second one is \textit{pessimistic time}, which is similar to optimistic time except the project is expected to go slower than usual.
+In this estimation, everything is assumed to go wrong, except for major catastrophes.
+The third estimation is the \textit{most likely time}, where it is the time required to go through a path assuming everything goes through normally.
+An extension of this is the \textit{expected time}, which accounts for the fact that some things don't always proceed normally.
+This is calculated by taking a weighted average of all three previous time estimations with the likely time estimation being 4 times more heavily averaged:
+\[ E = \frac{T_{optimistic} + \left( 4 \times T_{likely} \right) + T_{pessimistic}}{6} \]
+
+A measure of excess time and resources on a project is called the \textit{float}, or alternatively the \textit{slack}.  In a project, the amount of slack time is the amount of excess time that any particular item or activity can be delayed by and not affect subsequent tasks (free float), or affect the entire project (total float).  A project that has positive float or positive slack would indicate that the project is ahead of schedule, negative slack would indicate behind schedule, and no slack would indicate that the project is simply on schedule.
+\section{Graphing With PERT}
+
+\section{PERT Today}
+
+\section{CPM}
+Critical Path Method, CPM, is a project management technique similar to PERT that was also developed in the 1950's.
+CPM began development in 1956 by the \textit{DuPont} chemical company and computing firm \textit{Remington Rand Univac}.  The precursors to CPM, however, were originally developed and practiced by DuPont as early as 1940 and helped contribute to the success of the \textit{Manhattan Project}. 
+Like PERT, it too was devised as a way to manage activity interrelationships in a project.
+The Critical Path Method was named after its usage of a \textit{Critical Path}, a sequence of tasks or activities to be finished so that a project can be completed.
+Items or activities on the critical path cannot be done until previous activities have been completed.
+
+CPM was first used in 1958 to construct a new DuPont chemical plant, and then used again in 1959 to manage the shutdown of another DuPont plant.
+\section{Conclusion}
+
+\newpage
+\begin{thebibliography}{9}
+\bibitem{FederalStatisticalActivities}
+  Stauber, B. Ralph et al.
+  \textit{Federal Statistical Activities.}
+  The American Statistician, vol. 13, no. 2, 1959, pp. 9-12. \\
+  \url{www.jstor.org/stable/2682310}.
+\bibitem{SearchSoftwareQuality}
+  Rouse, Margaret.
+  \textit{PERT chart (Program Evaluation Review Technique)}.
+  SearchSoftwareQuality. WhatIs.com, May 2007. Web. 01 Dec. 2016. \\
+  \url{http://searchsoftwarequality.techtarget.com/definition/PERT-chart}.
+\bibitem{MindTools}
+  Mind Tools.
+  \textit{Critical Path Analysis and PERT Charts: Planning and Scheduling More Complex Projects.}
+  Critical Path Analysis and PERT Charts. Mind Tools, n.d. Web. 01 Dec. 2016. \\
+  \url{https://www.mindtools.com/critpath.html}.
+\bibitem{Chron}
+  Kielmas, Maria.
+  \textit{History of the Critical Path Method.}
+  History of the Critical Path Method. Chron, n.d. Web. 01 Dec. 2016. \\
+  \url{http://smallbusiness.chron.com/history-critical-path-method-55917.html}.
+\bibitem{TutorialsPoint}
+  TutorialsPoint.
+  \textit{PERT Estimation Technique.}
+  www.tutorialspoint.com. Tutorials Point, n.d. Web. 01 Dec. 2016. \\
+  \url{https://www.tutorialspoint.com/management_concepts/pert_estimation_technique.htm}.
+\end{thebibliography}
+\end{document}
