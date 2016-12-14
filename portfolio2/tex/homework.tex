@@ -1,6 +1,84 @@
 \section{Homework}
-\subsection{Linked Lists}
-\hwproblem{R-3.7}{
-  Give an algorithm for finding the penultimate (second to last) node in a
-  singly linked list where the last element is indicated by a null next link.
+\subsection{Stacks Queues and Deques}
+\hwproblem{R-5.6 (0.5)}{
+  Give a recursive function for removing all the elements in a stack.
 }
+\srccode{../hw/r-5.6.cpp}
+\hwproblem{C-5.1 (1)}{
+  Explain how you can implement all the functions of the deque ADT using two stacks.  Describe the running time of each operation.
+}
+A deque can be implemented by splitting it into two stacks: one for the front and one for the back.  The running time of this deque now depends on the internal implementation of the stack.
+\newline
+\newline
+\begin{tabular}{|lllll|}
+  \textbf{Operation} & \textbf{Array-Based Average} & \textbf{Array-Based Worst} & \textbf{List-Based Average} & \textbf{List-Based Worst} \\
+  \texttt{insertFront()} & $O(n)$ & $O(n)$ & $O(1)$ & $O(1)$ \\
+  \texttt{insertBack()} & $O(n)$ & $O(n)$ & $O(1)$ & $O(1)$ \\
+  \texttt{eraseFront()}  & $O(n)$ & $O(n)$ & $O(1)$ & $O(1)$ \\
+  \texttt{eraseBack()} & $O(n)$ & $O(n)$ & $O(1)$ & $O(1)$ \\
+  \texttt{front()} & $O(1)$ & $O(1)$ & $O(1)$ & $O(1)$ \\
+  \texttt{back()} & $O(1)$ & $O(1)$ & $O(n)$ & $O(n)$ \\
+  \texttt{size()} & $O(1)$ & $O(1)$ & $O(1)$ & $O(1)$ \\
+  \texttt{empty()} & $O(1)$ & $O(1)$ & $O(1)$ & $O(1)$
+\end{tabular}
+\hwproblem{C-5.3 (1)}{
+  Give a pseudo-code description for an array-based implementation of the deque ADT. What is the running time for each operation?
+}
+\srccode{../hw/c-5.3.cpp}
+\hwproblem{C-5.7 (1)}{
+  Describe a nonrecursive algorithm for enumerating all permutations of the numbers $\left\{1,2,\dots,n\right\}$.
+}
+First, find the number of permutations by calculating $n!$, this will be the number of possible permutations.  Fix the first item in the set.  For $i=0$ to $(n-1)!$ loops, repeatedly swap the second item until the end.  Each swap is a different permutation.  Once all $(n-1)!$ have been found, repeat the process by replacing the first item with the second, third, fourth, etc and keeping it fixed.  Repeat until a total of $n!$ permutations are found.
+\hwproblem{C-5.8 (0.5)}{
+  Describe a nonrecursive way of evaluating an expression in postfix notation.
+}
+Create an operand stack to hold all of the numbers in the expression.  Go through the expression one token at a time.  If it is a number, push it to the end of the operand stack.  If it is an operator, pop the last two operands and perform the operation on them, then push it back into the stack.  At the end of the expression, there should be one item left in the operand stack, pop that and it will be the value of the expression.
+\subsection{Trees}
+\hwproblem{R-7.1 (1)}{
+Describe an algorithm for counting the number of left external nodes in a binary tree, using the Binary tree ADT.
+}
+Loop through the binary tree and find each external node.  For each external node, find its parent node and check if that parent's left node is that external node.  If it is the left node, increment a counter by one.
+\hwproblem{R-7.2 (0.5)}{
+  The following questions refer to the tree of Figure 7.3:
+  \begin{enumerate}
+  \item Which node is the root?
+  \item What are the internal nodes?
+  \item How many descendents does node \texttt{cs016/} have?
+  \item How many ancestors does node \texttt{cs016/} have?
+  \item What are the siblings of node homeworks/?
+  \item Which nodes are in the subtree rooted at node \texttt{projects/}?
+  \item What is the depth of node \texttt{papers/}?
+  \item What is the height of the tree?
+  \end{enumerate}
+}
+\begin{enumerate}
+\item \texttt{/user/rt/courses/}
+\item The internal nodes are: \texttt{cs016/}, \texttt{homeworks/}, \texttt{programs/}, \texttt{cs252/}, \texttt{projects/}, \texttt{papers}, \texttt{demos}.
+\item 9
+\item 1
+\item \texttt{grades}, \texttt{homeworks/}
+\item \texttt{papers/}, \texttt{demos/}
+\item 3
+\item 5
+\end{enumerate}
+\hwproblem{R-7.3 (0.5)}{
+  Find the value of the arithmetic expression associated with each subtree of the binary tree of Figure 7.11.
+}
+\[((((3+1)\times 3)/((9−5)+2))−((3\times (7−4))+6))=-13\]
+\hwproblem{R-7.14 (0.5)}{
+  Let T be a tree with n nodes. What is the running time of the function \texttt{parenPrint(T,T.root())}? (See Code Fragment 7.11.)
+}
+The running time is $O(n)$ because it loops through each node exactly once.
+\hwproblem{C-7.6 (1)}{
+  Give an O(n)-time algorithm for computing the depth of all the nodes of a tree T, where n is the number of nodes of T.
+}
+\srccode{../hw/c-7.6.cpp}
+\hwproblem{C-7.33 (1)}{
+  Describe, in pseudo-code, a nonrecursive method for performing an in- order traversal of a binary tree in linear time.
+  (Hint: Use a stack.)
+}
+\srccode{../hw/c-7.33.cpp}
+\hwproblem{C-7.35 (0.5)}{
+  The path length of a tree T is the sum of the depths of all the nodes in T . Describe a linear-time method for computing the path length of a tree T (which is not necessarily binary).
+}
+\srccode{../hw/c-7.35.cpp}

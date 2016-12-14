@@ -1,27 +1,39 @@
 \contentsline {section}{\numberline {1}Homework}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}Linked Lists}{3}{subsection.1.1}
-\contentsline {subsubsection}{\numberline {1.1.1}Problem R-3.7}{3}{subsubsection.1.1.1}
-\contentsline {section}{\numberline {2}Projects}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}Expression Solver}{4}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Compiler Environment}{4}{subsubsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.2}Source}{4}{subsubsection.2.1.2}
-\contentsline {subsubsection}{\numberline {2.1.3}Compiler Output}{24}{subsubsection.2.1.3}
-\contentsline {subsubsection}{\numberline {2.1.4}Program Output}{24}{subsubsection.2.1.4}
-\contentsline {section}{\numberline {3}Labs}{26}{section.3}
-\contentsline {subsection}{\numberline {3.1}Text Editor}{26}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Compiler Environment}{26}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Source}{26}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Compiler Output}{36}{subsubsection.3.1.3}
-\contentsline {subsection}{\numberline {3.2}RPN Calculator}{36}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Compiler Environment}{36}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Source}{37}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Compiler Output}{39}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Program Output}{39}{subsubsection.3.2.4}
-\contentsline {subsection}{\numberline {3.3}Binary Tree Implementation}{39}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Source}{40}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Compiler Output}{46}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Program Output}{46}{subsubsection.3.3.3}
-\contentsline {subsection}{\numberline {3.4}In-Place Heap Sort}{46}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Source}{46}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Compiler Output}{50}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Program Output}{50}{subsubsection.3.4.3}
+\contentsline {subsection}{\numberline {1.1}Stacks Queues and Deques}{3}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Problem R-5.6 (0.5)}{3}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Problem C-5.1 (1)}{3}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Problem C-5.3 (1)}{3}{subsubsection.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.4}Problem C-5.7 (1)}{4}{subsubsection.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.5}Problem C-5.8 (0.5)}{4}{subsubsection.1.1.5}
+\contentsline {subsection}{\numberline {1.2}Trees}{5}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Problem R-7.1 (1)}{5}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Problem R-7.2 (0.5)}{5}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Problem R-7.3 (0.5)}{5}{subsubsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.4}Problem R-7.14 (0.5)}{5}{subsubsection.1.2.4}
+\contentsline {subsubsection}{\numberline {1.2.5}Problem C-7.6 (1)}{6}{subsubsection.1.2.5}
+\contentsline {subsubsection}{\numberline {1.2.6}Problem C-7.33 (1)}{6}{subsubsection.1.2.6}
+\contentsline {subsubsection}{\numberline {1.2.7}Problem C-7.35 (0.5)}{7}{subsubsection.1.2.7}
+\contentsline {section}{\numberline {2}Projects}{8}{section.2}
+\contentsline {subsection}{\numberline {2.1}Expression Solver}{8}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Compiler Environment}{8}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Source}{8}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Compiler Output}{28}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Program Output}{28}{subsubsection.2.1.4}
+\contentsline {section}{\numberline {3}Labs}{30}{section.3}
+\contentsline {subsection}{\numberline {3.1}Text Editor}{30}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Compiler Environment}{30}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Source}{30}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Compiler Output}{40}{subsubsection.3.1.3}
+\contentsline {subsection}{\numberline {3.2}RPN Calculator}{40}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Compiler Environment}{40}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Source}{41}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Compiler Output}{43}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Program Output}{43}{subsubsection.3.2.4}
+\contentsline {subsection}{\numberline {3.3}Binary Tree Implementation}{43}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Source}{44}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Compiler Output}{50}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Program Output}{50}{subsubsection.3.3.3}
+\contentsline {subsection}{\numberline {3.4}In-Place Heap Sort}{50}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Source}{50}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Compiler Output}{54}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Program Output}{54}{subsubsection.3.4.3}
