@@ -13,23 +13,47 @@ typedef MapKey<Position,LeprechaunData> LepMapKey;
 
 void iterateLeprechauns( LepMap& pMap )
 {
+    int j = 0;
+    
     for ( LepMapKey* i=pMap.first( ); i != nullptr; i = pMap.getNext( i ) )
     {
-        if ( i->nData.bIterated == false )
+        if ( i->nValue.bIterated == false )
         {
             double r = static_cast<double>( rand( ) % 2000 - 1000 ) / 1000.0;
-            i->nKey += r * i->nData.nGold;
+            i->nKey += r * i->nValue.nGold;
 
             Position p = i->nKey;
-            LeprechaunData d = i->nData;
+            LeprechaunData d = i->nValue;
+            d.bIterated = true;
+
+            pMap.remove( i );
+
+            auto* pHigher = pMap.getHigher( p );
+            auto* pLower = pMap.getLower( p );
+
+            if ( pHigher != nullptr )
+            {
+                d.nGold += pHigher->nValue.nGold / 2;
+                pHigher->nValue.nGold /= 2;
+            }
             
+            if ( pLower != nullptr )
+            {    
+                d.nGold += pLower->nValue.nGold / 2;
+                pLower->nValue.nGold /= 2;
+            }
+
+            pMap.insert( p, d );
             i = pMap.first( );
+            j = 0;
         }
+
+        j++;
     }
 
     for ( LepMapKey* i=pMap.first( ); i != nullptr; i = pMap.getNext( i ) )
     {
-        i->nData.bIterated = false;
+        i->nValue.bIterated = false;
     }
 }
 
@@ -40,7 +64,7 @@ void printLeprechauns( LepMap& pMap )
     int nIter = 1;
     for ( LepMapKey* i=pMap.first( ); i != nullptr; i = pMap.getNext( i ) )
     {
-        std::cout << nIter++ << " @ " << i->nKey << " w/ " << i->nData.nGold << " gold" << std::endl;
+        std::cout << i << "   " << nIter++ << " @ " << i->nKey << " w/ " << i->nValue.nGold << " gold" << std::endl;
     }
 }
 
@@ -51,30 +75,21 @@ int main( )
     std::srand( static_cast<unsigned int>( time( nullptr ) ) );
     size_t nLeprechauns = std::rand( ) % 4 + 3;
 
+    std::cout << "There are " << nLeprechauns << " leprechauns." << std::endl;
+    
     for ( size_t i=0; i < nLeprechauns; i++ )
     {
         pLeprechauns.insert( std::rand( ) % 100, { 1000000, false } );
     }
 
-    for ( LepMapKey* i=pLeprechauns.first( );
-          i != nullptr;
-          i = pLeprechauns.getNext( i ) )
-    {
-        std::cout << i->nKey;
+    printLeprechauns( pLeprechauns );
+    //iterateLeprechauns( pLeprechauns );
+    pLeprechauns.remove( pLeprechauns.first( ) );
+    printLeprechauns( pLeprechauns );
+    pLeprechauns.remove( pLeprechauns.last( ) );
+    printLeprechauns( pLeprechauns );
+    pLeprechauns.remove( pLeprechauns.getNext( pLeprechauns.first( ) ) );
+    printLeprechauns( pLeprechauns );
 
-        auto* pLower = pLeprechauns.getLower( i->nKey );
-        auto* pHigher = pLeprechauns.getHigher( i->nKey );
-
-        if ( pLower != nullptr )
-        {
-            std::cout << " left is " << pLower->nKey;
-        }
-
-        if ( pHigher != nullptr )
-        {
-            std::cout << " right is " << pHigher->nKey;
-        }
-
-        std::cout << std::endl;
-    }
+    std::cerr << "finished" << std::endl;
 }

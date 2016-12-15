@@ -55,12 +55,12 @@ public:
         return pData;
     }
     
-    BinaryTreeNode&* getLeft( )
+    BinaryTreeNode*& getLeft( )
     {
         return pLeft;
     }
 
-    BinaryTreeNode&* getRight( )
+    BinaryTreeNode*& getRight( )
     {
         return pRight;
     }
@@ -80,6 +80,30 @@ public:
         return pParent;
     }
 
+    bool isRightChild( )
+    {
+        if ( getParent( ) == nullptr )
+        {
+            return false;
+        }
+        else
+        {
+            if ( getParent( )->getRightNode( ) == this )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
+    bool isLeftChild( )
+    {
+        return !isRightChild( );
+    }
+    
     Data* getDataPtr( )
     {
         return &pData;
@@ -157,7 +181,7 @@ public:
     void removeRightNode( )
     {
         delete pRight;
-        dRight = nullptr;
+        pRight = nullptr;
     }
     
     /* checks to see if children exist */

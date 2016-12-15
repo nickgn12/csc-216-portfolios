@@ -1,2 +1,5 @@
 *.out
 .DS_Store
+.aux
+.dvi
+.log

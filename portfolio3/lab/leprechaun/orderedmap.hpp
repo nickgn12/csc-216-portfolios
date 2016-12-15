@@ -235,11 +235,18 @@ public:
         }
         else
         {
-            pCurrent = pCurrent->getRightNode( );
-            
-            while ( pCurrent->hasLeft( ) )
+            if ( pCurrent->hasRight( ) )
             {
-                pCurrent = pCurrent->getLeftNode( );
+                pCurrent = pCurrent->getRightNode( );
+                
+                while ( pCurrent->hasLeft( ) )
+                {
+                    pCurrent = pCurrent->getLeftNode( );
+                }
+            }
+            else
+            {
+                return nullptr;
             }
         }
 
@@ -306,21 +313,30 @@ public:
 
     void remove( MapNode* pNode )
     {
+        if ( pNode == nullptr )
+        {
+            std::cerr << "trying to remove nullptr" << std::endl;;
+            return;
+        }
+
+        std::cerr << "Removing " << pNode->nKey << std::endl;
+        
+        BinaryTreeNode<MapNode>* pTreeNode = pNode->pNode;
+        
         if ( !pNode->pNode->hasAnyChildren( ) )
         {
-            if ( pNode->pNode->getParent( ) != nullptr )
+            /* No children */
+            std::cerr << "no children" << std::endl;
+            
+            if ( pTreeNode->getParent( ) != nullptr )
             {
-                if ( pNode->pNode->getParent( )->getLeftNode == pNode )
+                if ( pTreeNode->isRightChild( ) )
                 {
-                    pNode->pNode->getParent( )->deleteLeftNode( );
-                }
-                else if ( pNode->pNode->getParent( )->getRightNode == pNode )
-                {
-                    pNode->pNode->getParent( )->deleteRightNode( );
+                    pTreeNode->getParent( )->removeRightNode( );
                 }
                 else
                 {
-                    delete pNode;
+                    pTreeNode->getParent( )->removeLeftNode( );
                 }
             }
             else
@@ -328,9 +344,58 @@ public:
                 pSearchTree.deleteRoot( );
             }
         }
+        else if ( !pTreeNode->hasChildren( ) && pTreeNode->hasAnyChildren( ) )
+        {
+            /* Only one child */
+            std::cerr << "one child" << std::endl;
+            
+            BinaryTreeNode<MapNode>* pChild;
+
+            if ( pTreeNode->hasLeft( ) )
+            {
+                pChild = pTreeNode->getLeft( );
+            }
+            else
+            {
+                pChild = pTreeNode->getRight( );
+            }
+            
+            if ( pTreeNode->getParent( ) != nullptr )
+            {
+                if ( pTreeNode->isRightChild( ) )
+                {
+                    pTreeNode->getParent( )->getRight( ) = pChild;
+                }
+                else
+                {
+                    pTreeNode->getParent( )->getLeft( ) = pChild;
+                }
+            }
+            else
+            {
+                pSearchTree.getRoot( ) = pChild;
+            }
+
+            pTreeNode->getLeft( ) = nullptr;
+            pTreeNode->getRight( ) = nullptr;
+            delete pTreeNode;
+        }
         else
         {
-            if ( pNode->
+            /* Has both children 
+               Find the smallest node on the right side */
+            std::cerr << "both children" << std::endl;
+            
+            BinaryTreeNode<MapNode>* pSmallest = pTreeNode->getRight( );
+
+            while ( pSmallest->hasLeft( ) )
+            {
+                pSmallest = pSmallest->getLeft( );
+            }
+
+            pTreeNode->getData( ) = pSmallest->getData( );
+
+            remove( pSmallest->getDataPtr( ) );
         }
     }
 };
