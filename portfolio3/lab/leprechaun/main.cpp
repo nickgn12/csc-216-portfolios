@@ -13,9 +13,10 @@ typedef MapKey<Position,LeprechaunData> LepMapKey;
 
 void iterateLeprechauns( LepMap& pMap )
 {
-    int j = 0;
+    LepMapKey* i = pMap.first( );
     
-    for ( LepMapKey* i=pMap.first( ); i != nullptr; i = pMap.getNext( i ) )
+    //for ( LepMapKey* i=pMap.first( ); i != nullptr; i = pMap.getNext( i ) )
+    while ( i != nullptr )
     {
         if ( i->nValue.bIterated == false )
         {
@@ -42,13 +43,14 @@ void iterateLeprechauns( LepMap& pMap )
                 d.nGold += pLower->nValue.nGold / 2;
                 pLower->nValue.nGold /= 2;
             }
-
+                     
             pMap.insert( p, d );
             i = pMap.first( );
-            j = 0;
         }
-
-        j++;
+        else
+        {
+            i = pMap.getNext( i );
+        }
     }
 
     for ( LepMapKey* i=pMap.first( ); i != nullptr; i = pMap.getNext( i ) )
@@ -64,7 +66,7 @@ void printLeprechauns( LepMap& pMap )
     int nIter = 1;
     for ( LepMapKey* i=pMap.first( ); i != nullptr; i = pMap.getNext( i ) )
     {
-        std::cout << i << "   " << nIter++ << " @ " << i->nKey << " w/ " << i->nValue.nGold << " gold" << std::endl;
+        std::cout << nIter++ << " @ " << i->nKey << " w/ " << i->nValue.nGold << " gold" << std::endl;
     }
 }
 
@@ -83,13 +85,13 @@ int main( )
     }
 
     printLeprechauns( pLeprechauns );
-    //iterateLeprechauns( pLeprechauns );
-    pLeprechauns.remove( pLeprechauns.first( ) );
-    printLeprechauns( pLeprechauns );
-    pLeprechauns.remove( pLeprechauns.last( ) );
-    printLeprechauns( pLeprechauns );
-    pLeprechauns.remove( pLeprechauns.getNext( pLeprechauns.first( ) ) );
-    printLeprechauns( pLeprechauns );
 
-    std::cerr << "finished" << std::endl;
+    for ( int i=0; i < 5; i++ )
+    {
+        iterateLeprechauns( pLeprechauns );
+    }
+
+    std::cout << "Iterated leprechauns 5 times" << std::endl;
+    
+    printLeprechauns( pLeprechauns );
 }

@@ -1,6 +1,8 @@
 #ifndef BTREE_HPP
 #define BTREE_HPP
 
+#include <functional>
+
 template<typename Data>
 class BinaryTreeNode
 {
@@ -80,6 +82,11 @@ public:
         return pParent;
     }
 
+    void setParent( BinaryTreeNode* pNewParent )
+    {
+        pParent = pNewParent;
+    }
+    
     bool isRightChild( )
     {
         if ( getParent( ) == nullptr )
