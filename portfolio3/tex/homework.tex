@@ -1,5 +1,40 @@
 \section{Homework}
-\subsection{Stacks Queues and Deques}
-\hwproblem{R-5.6 (0.5)}{
-  Give a recursive function for removing all the elements in a stack.
+\subsection{Search Trees}
+\hwproblem{R-10.19ae (0.5)}{
+  Consider a tree T storing 100,000 entries. What is the worst-case height of T in the following cases?
+  \begin{enumerate}
+  \item T is an AVL tree.
+  \item T is a binary search tree.
+  \end{enumerate}
 }
+The maximum height of an AVL tree is $2\log n + 2=12$.  The maximum height of a binary search tree is $O(n)$, $O(100,000)=100,000$.
+\hwproblem{R-10.24 (0.5)}{
+  Explain why you would get the same output in an inorder listing of the entries in a binary search tree, T, independent of whether T is maintained to be an AVL tree, splay tree, or red-black tree.
+}
+The whole purpose of a binary search tree is to have elements sorted so that an in-order traversal will output items in the same order every time.  If a tree does not do this then it is not considered to be a binary search tree.
+\hwproblem{C-10.7 (1)}{
+  If we maintain a reference to the position of the left-most internal node of an AVL tree, then operation first (Section 9.3) can be performed in $O(1)$ time. Describe how the implementation of the other map functions needs to be modified to maintain a reference to the left-most position.
+}
+Any function that changes the positioning of the nodes must also update the left-most node reference.  The insert, delete, and update functions must update the reference.  The insert and delete functions must check the position because something smaller than the left-most node can be inserted or the smallest node can be deleted.  The update function must also set the node reference because the nodes may be swapped around and positions may be exchanged.
+\hwproblem{C-10.12,13 (1.5)}{
+  Show that the nodes that become unbalanced in an AVL tree during an insert operation may be nonconsecutive on the path from the newly inserted node to the root.  Show that at most one node in an AVL tree becomes unbalanced after operation \texttt{removeAboveExternal} is performed within the execution of a erase map operation.}
+The balance factor of an AVL tree is equal to $-h_{left} + h_{right}$.  If a node is inserted such that its parent becomes balanced (or simply not unbalanced enough to get updated), a node higher up may become unbalanced because the left side of the tree becomes higher.  This would be an example of a node on a nonconsecutive path becoming unbalanced.  If a node is removed and its parent has only one child after that, then only the grandparent will become unbalanced.
+\hwproblem{C-10.21 (1.5)}{
+  The \textit{mergeable heap} ADT consists of operations \texttt{insert(k,x)}, \texttt{removeMin()}, \texttt{unionWith(h)}, and \texttt{min()}, where the \texttt{unionWith(h)} operation performs a union of the mergeable heap h with the present one, destroying the old versions of both. Describe a concrete implementation of the mergeable heap ADT that achieves $O(\log n)$ performance for all its operations.
+}
+An $O(\log n)$ implementation of a mergeable heap can be achieved by using a \textit{binomial heap}.  A binomial heap is a collection of binomial trees, a binomial tree being defined by the following rules:
+\begin{itemize}
+\item A binomial tree with 0 order is just a single node
+\item A binomial tree with k order has k children, with those children being binomial trees of orders $k-1$, $k-2$, $\ldots$, $1$, $0$.  The children go in that order from left to right.
+\end{itemize}
+Merging a binomial tree of same order is very simple.  Find the tree that is larger (or smaller, depending on the heap property).  The other tree will become a child of that first tree, and the first tree will increase its order to $k+1$.
+A binomial heap can have either 1 or 0 binomial trees of each order.  These trees each satisfy the heap property.
+\newline\newline
+\begin{tabular}{|lLl|}
+  \hline
+\textbf{Operation} & \textbf{Procedure} & \textbf{Complexity} \\
+\texttt{unionWith(h)} & Merge any binomial trees that have the same order.  For any trees that don't match, just place them in the heap. & $O(\log n)$ \\\hline
+\texttt{min()} & Search through each binomial tree and find the smallest  root. & $O(\log n)$ \\\hline
+\texttt{removeMin()} & Find the minimum element as before.  Remove the whole tree from the heap. Transform the sub-binomial trees into a binomial heap and merge it back. & $O(\log n)$ \\\hline
+\texttt{insert} & Create a separate heap with just the key.  Merge this single heap into the heap. & $O(1)$ \\\hline
+\end{tabular}

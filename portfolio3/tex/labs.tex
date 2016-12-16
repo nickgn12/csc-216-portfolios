@@ -1,5 +1,29 @@
 \section{Labs}
-\subsection{Text Editor}
-\info{Text Editor}{5}{
-  P-6.3.  Write a simple text editor using a list to store all the lines.
-  }
+\subsection{Bucket Sort}
+\info{Bucket Sort}{2}{
+  Design and implement a version of the bucket-sort algorithm for sorting a linked list of $n$ entries (for instance, a list of type \texttt{std::list<int>}) with integer keys taken from the range $[0, N − 1]$, for $N \geq 2$. The algorithm should run in $O(n + N)$ time.
+}
+\subsubsection{Compiler Environment}
+\srcfile{environment}
+\subsubsection{Source}
+\srccode{../lab/bucketsort/main.cpp}
+\subsubsection{Compiler Output}
+\srcfile{../lab/bucketsort/compilerout}
+\subsubsection{Program Output}
+\srcfile{../lab/bucketsort/progout}
+\subsection{Leprechaun Simulator}
+\info{Jumping Leprechauns}{3}{
+  Write a program that performs a simple n-body simulation, called “Jumping Leprechauns.” This simulation involves n leprechauns, numbered $1$ to $n$. It maintains a gold value $g_i$ for each leprechaun $i$, which begins with each leprechaun starting out with a million dollars worth of gold, that is, $g_i = 1000000$ for each $i = 1,2,\ldots,n$. In addition, the simulation also maintains, for each leprechaun, $i$, a place on the horizon, which is represented as a double-precision floating point number, $x_i$. In each iteration of the simulation, the simulation processes the leprechauns in order. Processing a leprechaun $i$ during this iteration begins by computing a new place on the horizon for $i$, which is determined by the assignment
+\[x_i\leftarrow x_i+rg_i\]
+where $r$ is a random floating-point number between $−1$ and $1$. The leprechaun $i$ then steals half the gold from the nearest leprechauns on either side of him and adds this gold to his gold value, $g_i$. Write a program that can perform a series of iterations in this simulation for a given number, $n$, of leprechauns. You must maintain the set of horizon positions using an ordered map data structure described in this chapter.
+}
+\subsubsection{Compiler Environment}
+\srcfile{environment}
+\subsubsection{Source}
+\srccode{../lab/leprechaun/main.cpp}
+\srccode{../lab/leprechaun/btree.hpp}
+\srccode{../lab/leprechaun/orderedmap.hpp}
+\subsubsection{Compiler Output}
+\srcfile{../lab/leprechaun/compilerout}
+\subsubsection{Program Output}
+\srcfile{../lab/leprechaun/progout}

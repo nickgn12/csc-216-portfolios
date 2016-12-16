@@ -48,7 +48,7 @@ Copy all of the elements from L into L'.  Start copying M at the last node of L'
   Give a fast algorithm for concatenating two doubly linked lists L and M, with
   header and trailer sentinel nodes, into a single list L′.
 }
-
+Remove L's trailing sentinel and M's header sentinel and save L's last node and M's first node, we will call them L' and M' respectively.  Set L' next to M', the previous of M' to L.  The lists are now concatenated.
 Copy all the nodes from L into L'.  Copy the nodes from M into the end of L'.  Set the next 
 \hwproblem{C-3.10}{
   Describe in detail how to swap two nodes x and y (and not just their contents)

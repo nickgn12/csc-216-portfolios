@@ -5,7 +5,7 @@
 
 std::list<int> bucketSort( const std::list<int>& pList, int nMin, int nMax )
 {
-    std::stack<int>* pBuckets = new std::stack<int>[(nMax - nMin) + 1];
+    std::stack<int>* pBuckets = new std::stack<int>[static_cast<unsigned int>(nMax - nMin) + 1];
     std::list<int> pReturnList;
 
     for ( auto i = pList.begin( ); i != pList.end( ); i++ )
@@ -54,13 +54,15 @@ void printList( const std::list<T>& pList )
     
     for ( auto i = pList.begin( ); i != pList.end( ); i++ )
     {
-        std::cout << *i << std::endl;
+        std::cout << *i << " ";
     }
+
+    std::cout << std::endl;
 }
 
 int main( )
 {
-    srand( time( nullptr ) );
+    srand( static_cast<unsigned int>( time( nullptr ) ) );
 
     std::list<int> pList;
 

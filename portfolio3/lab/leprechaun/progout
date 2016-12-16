@@ -1,0 +1,97 @@
+➜  leprechaun git:(master) ✗ ./leprechaun.out
+There are 4 leprechauns.
+Contents of leprechaun map:
+1 @ 11 w/ 1e+06 gold
+2 @ 23 w/ 1e+06 gold
+3 @ 29 w/ 1e+06 gold
+4 @ 32 w/ 1e+06 gold
+Iterated leprechauns 5 times
+Contents of leprechaun map:
+1 @ -1.1785e+06 w/ 894958 gold
+2 @ 206579 w/ 947357 gold
+3 @ 333358 w/ 962387 gold
+4 @ 555869 w/ 1.1953e+06 gold
+➜  leprechaun git:(master) ✗ ./leprechaun.out
+There are 3 leprechauns.
+Contents of leprechaun map:
+1 @ 22 w/ 1e+06 gold
+2 @ 58 w/ 1e+06 gold
+3 @ 72 w/ 1e+06 gold
+Iterated leprechauns 5 times
+Contents of leprechaun map:
+1 @ -403878 w/ 499268 gold
+2 @ 50139.7 w/ 848755 gold
+3 @ 2.4141e+06 w/ 1.65198e+06 gold
+➜  leprechaun git:(master) ✗ ./leprechaun.out
+There are 6 leprechauns.
+Contents of leprechaun map:
+1 @ 21 w/ 1e+06 gold
+2 @ 22 w/ 1e+06 gold
+3 @ 42 w/ 1e+06 gold
+4 @ 65 w/ 1e+06 gold
+5 @ 80 w/ 1e+06 gold
+6 @ 84 w/ 1e+06 gold
+Iterated leprechauns 5 times
+Contents of leprechaun map:
+1 @ -1.16275e+06 w/ 380127 gold
+2 @ -862824 w/ 1.73828e+06 gold
+3 @ 580376 w/ 1.03174e+06 gold
+4 @ 723471 w/ 1.70831e+06 gold
+5 @ 1.59557e+06 w/ 392792 gold
+6 @ 1.69344e+06 w/ 748749 gold
+➜  leprechaun git:(master) ✗ ./leprechaun.out
+There are 5 leprechauns.
+Contents of leprechaun map:
+1 @ 25 w/ 1e+06 gold
+2 @ 57 w/ 1e+06 gold
+3 @ 70 w/ 1e+06 gold
+4 @ 91 w/ 1e+06 gold
+5 @ 94 w/ 1e+06 gold
+Iterated leprechauns 5 times
+Contents of leprechaun map:
+1 @ -860354 w/ 523193 gold
+2 @ -634719 w/ 1.05164e+06 gold
+3 @ 338756 w/ 587860 gold
+4 @ 385943 w/ 1.92767e+06 gold
+5 @ 419655 w/ 909637 gold
+➜  leprechaun git:(master) ✗ ./leprechaun.out
+There are 5 leprechauns.
+Contents of leprechaun map:
+1 @ 25 w/ 1e+06 gold
+2 @ 57 w/ 1e+06 gold
+3 @ 70 w/ 1e+06 gold
+4 @ 91 w/ 1e+06 gold
+5 @ 94 w/ 1e+06 gold
+Iterated leprechauns 5 times
+Contents of leprechaun map:
+1 @ -860354 w/ 523193 gold
+2 @ -634719 w/ 1.05164e+06 gold
+3 @ 338756 w/ 587860 gold
+4 @ 385943 w/ 1.92767e+06 gold
+5 @ 419655 w/ 909637 gold
+➜  leprechaun git:(master) ✗ ./leprechaun.out
+There are 4 leprechauns.
+Contents of leprechaun map:
+1 @ 8 w/ 1e+06 gold
+2 @ 19 w/ 1e+06 gold
+3 @ 49 w/ 1e+06 gold
+4 @ 83 w/ 1e+06 gold
+Iterated leprechauns 5 times
+Contents of leprechaun map:
+1 @ -96671.6 w/ 745056 gold
+2 @ 3398.62 w/ 2.22748e+06 gold
+3 @ 113228 w/ 264465 gold
+4 @ 113354 w/ 763000 gold
+➜  leprechaun git:(master) ✗ ./leprechaun.out
+There are 4 leprechauns.
+Contents of leprechaun map:
+1 @ 8 w/ 1e+06 gold
+2 @ 19 w/ 1e+06 gold
+3 @ 49 w/ 1e+06 gold
+4 @ 83 w/ 1e+06 gold
+Iterated leprechauns 5 times
+Contents of leprechaun map:
+1 @ -96671.6 w/ 745056 gold
+2 @ 3398.62 w/ 2.22748e+06 gold
+3 @ 113228 w/ 264465 gold
+4 @ 113354 w/ 763000 gold
